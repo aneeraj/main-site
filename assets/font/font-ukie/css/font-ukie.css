@@ -23,7 +23,34 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
 
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.social-icons {
+    padding-top: 5px;
+}
+.social-icons li a {
+    font-size: 21px;
+    color: #ffffff;
+}
+.social-icons li a:hover {
+    color: #ce0a0a;
+}
 .uf-behance:before {
     content: "\e959";
 }
