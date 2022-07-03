@@ -78,7 +78,7 @@ cat /tmp/$CERTNAME2 | sudo tee $filename
 }
 
 #Is scloud?
-if [[ $( sudo grep "^System.ClientName.*scloud.stibo.com"  $SCONF ) ]] || [[ $( sudo grep System.LoadBalancer.URI.*scloud.stibo.com  $SCONF ) ]] ; then
+if [[ $( sudo grep "^System.Servers.*scloud.stibo.com"  $SCONF ) ]] || [[ $( sudo grep System.LoadBalancer.URI.*scloud.stibo.com  $SCONF ) ]] ; then
 echo "This system is using scloud certificate"
 EXP=$( echo | openssl s_client -showcerts -servername localhost -connect localhost:443 2>/dev/null | openssl x509 -inform pem -noout -dates | grep notAfter | awk -F"=" {'print $2'}   )
 echo "SSL Expiry date for the currently installed (local) certificate is : $EXP"
