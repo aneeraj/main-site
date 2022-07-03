@@ -13,6 +13,7 @@ JCONF=step-jetty-proxy-https.conf
 NOW=$(date +"%m-%d-%Y")
 SCONF=$( sudo grep "^@include.*sharedconfig.properties" $STEP_HOME/config.properties | awk {'print $2'} )
 WORKAREA=$( dirname $SCONF )
+yum install wget -y
 
 
 
