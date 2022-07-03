@@ -5,9 +5,7 @@
 STEP_HOME=/opt/stibo/step
 HTTPD_HOME=/etc/httpd/conf.d
 CERTNAME=wildcard.scloud.stibo.com.crt
-CERTNAME2=wildcard.scloud.stibo.com.pem
 URL=https://zahktest.s3.ap-south-1.amazonaws.com/SSLcert/$CERTNAME    #New SSL Cert (apache)
-URL2=https://zahktest.s3.ap-south-1.amazonaws.com/SSLcert/$CERTNAME2    #New SSL Cert (haproxy)
 JCONF=step-jetty-proxy-https.conf
 #CERT_NAME=scloud.stibo.com-wildcard.crt
 NOW=$(date +"%m-%d-%Y")
