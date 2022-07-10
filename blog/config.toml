@@ -1,4 +1,4 @@
-baseURL = 'http://neerajajithkumar.com/'
+baseURL = 'http://neerajajithkumar.com/blog/'
 languageCode = 'en-us'
 title = 'Blog - Neeraj Ajithkumar'
 theme = "cactus"
@@ -7,7 +7,7 @@ theme = "cactus"
   colortheme = "dark" # dark, light, white, or classic
 [[menu.main]]
 name = "Home"
-url = "https://neerajajithkumar.com/"
+url = "https://neerajajithkumar.com/blog/"
 weight = 1
 
 [[menu.main]]
