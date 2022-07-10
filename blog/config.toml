@@ -1,4 +1,4 @@
-baseURL = 'https://neerajajithkumar.com/blog'
+baseURL = 'https://neerajajithkumar.com/blog/'
 languageCode = 'en-us'
 title = 'Blog - Neeraj Ajithkumar'
 theme = "cactus"
@@ -14,5 +14,6 @@ weight = 1
 name = "Blog"
 url = "/posts"
 weight = 2
-
+relativeURLs = true
+canonifyURLs = true
   mainSectionTitle = "Blog"
