@@ -1,157 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168757615-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-168757615-1');
-    </script>
+{{ define "main" }}
+  <section id="about">
+  {{ if isset .Site.Params "description" }}
+    {{ .Site.Params.description | $.Page.RenderString }}
+  {{ end }}
+  {{ if isset .Site.Params "social" }}
+      <p>Find me on
+      {{ $length := (len .Site.Params.social) }}
+      {{ range $index, $elem := .Site.Params.social}}
+      {{ if eq $elem.name "email" }}
+        <a class="icon" target="_blank" rel="noopener" href="mailto:{{ $elem.link }}" aria-label="Email">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        {{ else if eq $elem.name "rss" }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="RSS">
+          <i class="fas fa-rss" aria-hidden="true"></i>
+        </a>
+        {{ else if eq $elem.name "scholar" }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="Google Scholar">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+        </a>
+        {{ else }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="{{ $elem.name }}">
+          <i class="fab fa-{{ lower $elem.name }}" aria-hidden="true"></i>
+        </a>
+        {{ end }}
+        {{ if (lt (add $index 2) $length) }}
+          {{- print " , " -}}
+        {{ else if (lt (add $index 1) $length) }}
+          {{- print " and " -}}
+        {{ else }}
+          {{- print "." -}}
+        {{ end }}
+      {{ end }}
+      </p>
+  {{ end }}
+  {{ partial "optional-about.html" . }}
+  </section>
 
-    <!-- Encoding -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Viewport width and initial-scale on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Home | Neeraj Ajithkumar</title>
-    <!-- mobile tab color -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#313131">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#313131">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#313131">
-    <!-- end mobile tab color -->
-    <!--  Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-    <!-- Font Ukie -->
-    <link type="text/css" media="all" href="assets_home/font/font-ukie/css/font-ukie.css" rel="stylesheet">
-    <!-- include the bootstrap stylesheet -->
-    <link rel="stylesheet" href="assets_home/css/bootstrap.min.css">
-    <!-- include the fullpage stylesheet -->
-    <link rel="stylesheet" href="assets_home/css/jquery.fullpage.css">
-    <!-- include the magnific-popup stylesheet -->
-    <link rel="stylesheet" href="assets_home/css/magnific-popup.css">
-    <!-- include the site stylesheet -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <!-- include include default theme -->
-    <link rel="stylesheet" href="assets_home/css/red-color.css" />
-    <link href="#" rel="stylesheet" type="text/css" data-color="green-scheme" media="all" id="stylesheet-new" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="144x144" href="assets_home/img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets_home/img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets_home/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" href="assets_home/img/favicons/apple-touch-icon.png">
-    <link rel="shortcut icon" href="assets_home/img/favicons/apple-touch-icon.png">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4LJQD0N1G"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <section id="writing">
+    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">{{ .Site.Params.mainSectionTitle | default "Writings" }}</a></span>
+    {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
+    <span class="h2">Topics</span>
+    <span class="widget tagcloud">
+      {{ $AllRegularPagesCount := len .Site.RegularPages }}
+      {{ range $elem := .Site.Taxonomies.tags.Alphabetical }}
+      <a style="font-size: {{ (add 0.5 (mul 5 (div (float $elem.Count) $AllRegularPagesCount))) }}rem;" href="{{ $elem.Page.Permalink }}">
+        {{- .Page.Title -}}
+      </a>
+      {{ end }}
+    </span>
+    <span class="h2">Most recent</span>
+    {{ end }}
 
-    gtag('config', 'G-G4LJQD0N1G');
-    </script>
-</head>
-<body>
-<!-- Start Preloader -->
-<div id="page-preloader">
-    <img src="assets_home/img/loader.gif" alt="">
-</div>
-<!-- End Preloader -->
-<!-- Start Fullpage -->
-<div class="remove" id="fullpage">
-    <!-- Start section about -->
-    <div id="navabout" data-anchor="about-data" class="section about">
-        <!-- Start Bg-title -->
-        <div class="bg-title">
-            About
-        </div>
-        <!-- End Bg-title -->
-        <!-- Start container  -->
-        <div class="container">
-            <!-- Start row  -->
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <!-- Start Text-center -->
-                <div class="col-md-3 text-center">
-                    <!-- Start Photo -->
-                    <div class="photo">
+    {{ $showAllPostsOnHomePage := false }}
+    {{ if (isset .Site.Params "showallpostsonhomepage") }}
+      {{ $showAllPostsOnHomePage = .Site.Params.ShowAllPostsOnHomePage }}
+    {{ end }}
+    {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
+    {{ $mainPosts := (sort ( where site.RegularPages "Type" "in" site.Params.mainSections ) "Date" "desc") }}
+    {{ if $showAllPostsOnHomePage }}
+    <ul class="post-list">
+      {{ range (.Paginate $mainPosts).Pages }}
+        <li class="post-item">
+          <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div>
+          <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a></span>
+        </li>
+      {{ end }}
+    </ul>
 
-                        <div class="photo-wrapper">
-                            <img id="img-set" src="assets_home/img/designer.svg" alt="">
-                        </div>
-                    </div>
-                    <!-- End Photo -->
-                    <!-- Start Photo-bg -->
-                    <div class="photo-bg">
-                    </div>
-                    <!-- End Photo-bg -->
-                    <h2 class="name">
-                        Neeraj Ajithkumar
+    {{ partial "pagination.html" . }}
 
-                    </h2>
-                    <p class="desiner">Systems Engineer</p>
-                                      <!-- End Photo-bg
-                    <p class="date">
-                        November 14, 1994
-                    </p> -->
-                    <p class="adress">
-                        Bengaluru, India
-                    </p>
-                    <ul class="social-icons  list-inline mb-0 text-center">
-                        <li class="list-inline-item"> <a href="https://www.linkedin.com/in/aneeraj/" target="_blank"> <i class="fab fa-linkedin" aria-hidden="true"></i> </a></li> <li class="list-inline-item"> <a href="https://github.com/aneeraj" target="_blank"> <i class="fab fa-github" aria-hidden="true"></i> </a></li><li class="list-inline-item"> <a href="https://twitter.com/a__neeraj" target="_blank"> <i class="fab fa-twitter" aria-hidden="true"></i> </a></li></ul>
-                </div>
-                <!-- End Text-center -->
-                <div class=" col-md-offset-1 col-md-5 center">
-                    <h1 class="section-title">Hello!</h1>
-                    <h2 class="text-title">
-                        This is all about me!
-                    </h2>
-                    <!-- Start about-text -->
-                    <p class="about-text">
-                        By profession I am a Platform Engineer, 
-                        working on exciting projects in Bengaluru India.
-                        That's only about 8 hours of my day though. I love 
-                        making simple and clean things that have complicated 
-                        stories behind them, with a dose of humor, if possible.
-                    </p>
-                    <!-- End about-text -->
-                    <!-- Start row  -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="https://neerajajithkumar.com/posts/" class="btn download"><i class="uf uf-pencil-tilted"></i>Blog</a>
-                            <a href="https://neerajajithkumar.com/Neeraj%20A%20-%20Resume.pdf" target="_blank" class="btn download"><i class="uf uf-download"></i>Download CV</a>
-                            <a href="mailto:hello@neerajajithkumar.com" class="btn download"><i class="uf uf-mail"></i>Contact Me</a>
-                        </div>
-                        <!-- End row  -->
-                    </div>
-                </div>
-            </div>
-            <!-- End row  -->
-        </div>
-        <!-- End container -->
-    </div>
-    <!-- End section about -->
-</div>
-<!-- End Fullpage -->
+    {{ else }}
+    <ul class="post-list">
+      {{ .Scratch.Set "count" 5 }}
+      {{ if isset .Site.Params "postsonhomepage" }}
+        {{ .Scratch.Set "count" .Site.Params.postsOnHomePage }}
+      {{ end }}
+      {{ range (first (.Scratch.Get "count") $mainPosts) }}
+        <li class="post-item">
+          <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div>
+          <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a></span>
+        </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </section>
 
-<!-- Scroll To Top -->
-<a href="#" class="scroll-to-top" style="display: inline;">
-    <i class="uf uf-arrow-up"></i>
-</a>
-<!-- end Scroll To Top -->
-
-<!-- Scripts -->
-<script src="assets_home/js/jquery.min.js" type="text/javascript"></script>
-<script src="assets_home/js/jquery.fullPage.min.js" type="text/javascript"></script>
-<script src="assets_home/js/jquery.mixitup.js" type="text/javascript"></script>
-<script src="assets_home/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
-<script src="assets_home/js/scripts.js" type="text/javascript"></script>
-</body>
-</html>
+  {{ $showProjectsList := false }}
+  {{ if (isset .Site.Params "showprojectslist") }}
+    {{ $showProjectsList = .Site.Params.showProjectsList }}
+  {{ else if .Site.Data.projects }}
+    {{ $showProjectsList = true }}
+  {{ end }}
+  {{ if $showProjectsList }}
+    {{ $projectsUrl := "#" }}
+    {{ if isset .Site.Params "projectsurl" }}
+      {{ $projectsUrl = .Site.Params.projectsUrl }}
+    {{ end }}
+  <section id="projects">
+    <span class="h1"><a href="{{ $projectsUrl }}">Projects</a></span>
+    <ul class="project-list">
+        {{ range .Site.Data.projects.list }}
+        <li class="project-item">
+          <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+        </li>
+        {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+{{ end }}
