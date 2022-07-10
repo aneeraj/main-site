@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithms on Blog - Neeraj Ajithkumar</title>
-    <link>https://neerajajithkumar.com/tags/algorithms/</link>
+    <link>https://neerajajithkumar.com/blog/tags/algorithms/</link>
     <description>Recent content in Algorithms on Blog - Neeraj Ajithkumar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2020 09:00:00 +0000</lastBuildDate><atom:link href="https://neerajajithkumar.com/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jun 2020 09:00:00 +0000</lastBuildDate><atom:link href="https://neerajajithkumar.com/blog/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World!</title>
-      <link>https://neerajajithkumar.com/posts/2020-06-06-changes-in-java-string/</link>
+      <link>https://neerajajithkumar.com/blog/posts/2020-06-06-changes-in-java-string/</link>
       <pubDate>Sat, 06 Jun 2020 09:00:00 +0000</pubDate>
       
-      <guid>https://neerajajithkumar.com/posts/2020-06-06-changes-in-java-string/</guid>
+      <guid>https://neerajajithkumar.com/blog/posts/2020-06-06-changes-in-java-string/</guid>
       <description>Before 1.7.0_06, String has 4 non static field:
 char[] value int[] offset int count int hash Subing.substring create a String by sharing the original String&amp;rsquo;s internal char[] value and setting offset. This saves memory and makes String.substring run in a constant time($O(1)$). Meanwhile, this feature may cause memory leak[^1].
 http://hg.openjdk.java.net/jdk6/jdk6/jdk/file/8deef18bb749/src/share/classes/java/lang/String.java
