@@ -1,4 +1,4 @@
-baseURL = '//neerajajithkumar.com/blog/'
+baseURL = 'https://blog.neerajajithkumar.com'
 languageCode = 'en-us'
 title = 'Blog - Neeraj Ajithkumar'
 theme = "cactus"
