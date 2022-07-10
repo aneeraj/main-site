@@ -16,3 +16,5 @@ url = "/posts"
 weight = 2
 
   mainSectionTitle = "Blog"
+relativeURLs = true
+canonifyURLs = true
