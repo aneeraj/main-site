@@ -7,7 +7,7 @@ a {
     color: #f27768; }
 
 h1, h2, h3, h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   color: #fff; }
 
 h1 {
@@ -61,7 +61,7 @@ li a:hover {
 
 .bg-title {
   opacity: 0.05;
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 172px;
   font-weight: 700;
   line-height: 172px;
@@ -99,7 +99,7 @@ li a:hover {
   background-color: #ce0a0a; }
 
 .desiner {
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -199,7 +199,7 @@ li a:hover {
   line-height: 48px;
   font-size: 14px;
   font-weight: 500;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "JetBrains Mono",monospace; }
   .price-item:after {
     content: "";
     display: block;
@@ -215,7 +215,7 @@ li a:hover {
   height: 100px; }
 
 .money {
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 48px;
   font-weight: 700;
   line-height: 100px; }
@@ -320,7 +320,7 @@ li a:hover {
   margin: 0;
   line-height: 48px;
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-weight: 500; }
   .filter:after {
     content: "";
@@ -371,7 +371,7 @@ li a:hover {
   transition: all 0.5s ease-in-out; }
   .hover-content p {
     color: white;
-    font-family: "Montserrat", sans-serif;
+    font-family: "JetBrains Mono",monospace;
     font-size: 16px;
     margin-bottom: 20px;
     margin-left: 20px; }
@@ -423,7 +423,7 @@ li a:hover {
 .contact-text {
   font-size: 14px;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   line-height: 24px; }
   .contact-text i {
     color: #f27768;
@@ -626,7 +626,7 @@ form {
   display: block;
   padding: 0 40px;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 32px;
   font-weight: 700;
   line-height: 60px;
@@ -649,7 +649,7 @@ form {
   top: 100px;
   opacity: 0.1;
   color: #010000;
-  font-family: "Montserrat", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 172px;
   font-weight: 700;
   line-height: 170px;
