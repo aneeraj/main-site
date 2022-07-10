@@ -53,7 +53,7 @@ a:visited {
   transition: all 0.5s ease-in-out; }
 
 p {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   color: #fff; }
 
 li a:hover {
@@ -111,7 +111,7 @@ li a:hover {
 
 .date, .adress {
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -230,7 +230,7 @@ li a:hover {
     margin-right: 10px; }
 
 .prise-text {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 14px;
   font-weight: 400;
   line-height: 50px;
@@ -433,7 +433,7 @@ li a:hover {
     line-height: 24px;
     margin-right: 10px; }
   .contact-text span {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "JetBrains Mono",monospace;
     line-height: 24px;
     display: block;
     margin-bottom: 25px;
@@ -453,7 +453,7 @@ li a:hover {
 
 .input-text,
 .input-textarea {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-size: 14px;
   font-weight: 400;
   line-height: 50px;
@@ -657,7 +657,7 @@ form {
 
 .copyright {
   color: #c7c7c7;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   font-weight: 300;
   line-height: 24px;
   position: absolute;
@@ -1008,7 +1008,7 @@ form {
   .image-form select::-ms-expand {
     display: none; }
   .image-form .select {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "JetBrains Mono",monospace;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
@@ -1097,7 +1097,7 @@ form {
 
 .file_upload > div {
   padding-left: 1em;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   line-height: 49px;
   color: #313131;
   font-size: 14px; }
@@ -1116,7 +1116,7 @@ form {
 
 .fill {
   font-weight: 400;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "JetBrains Mono",monospace;
   line-height: 49px;
   color: #313131;
   font-size: 14px;
