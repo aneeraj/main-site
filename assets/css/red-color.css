@@ -138,7 +138,7 @@ li a:hover {
   line-height: 38px;
   display: inline-block;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "JetBrains Mono",monospace;
   font-weight: 700;
   border-radius: 0;
@@ -150,7 +150,7 @@ li a:hover {
   transition: all 0.5s ease-in-out; }
   .btn i {
     font-family: UkieFont;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 24px;
     margin-right: 5px; }
