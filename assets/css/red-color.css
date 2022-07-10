@@ -145,7 +145,7 @@ li a:hover {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
   .btn i {
-    font-family: UkieFont;
+    font-family: "JetBrains Mono",monospace;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
