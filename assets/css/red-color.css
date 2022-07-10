@@ -7,13 +7,13 @@ a {
     color: #f27768; }
 
 h1, h2, h3, h4 {
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   color: #fff; }
 
 h1 {
-  font-size: 38px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 48px; }
+  line-height: 58px; }
 
 h2 {
   font-size: 21px;
@@ -53,7 +53,7 @@ a:visited {
   transition: all 0.5s ease-in-out; }
 
 p {
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Noto Sans", sans-serif;
   color: #fff; }
 
 li a:hover {
@@ -61,7 +61,7 @@ li a:hover {
 
 .bg-title {
   opacity: 0.05;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 172px;
   font-weight: 700;
   line-height: 172px;
@@ -99,7 +99,7 @@ li a:hover {
   background-color: #ce0a0a; }
 
 .desiner {
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -111,7 +111,7 @@ li a:hover {
 
 .date, .adress {
   margin: 0;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Noto Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -137,7 +137,6 @@ li a:hover {
   padding: 0 10px;
   font-size: 14px;
   font-weight: 700;
-  font-family: "JetBrains Mono",monospace;
   border-radius: 0;
   color: #fffefe;
   -webkit-transition: all 0.5s ease-in-out;
@@ -200,7 +199,7 @@ li a:hover {
   line-height: 48px;
   font-size: 14px;
   font-weight: 500;
-  font-family: "JetBrains Mono",monospace; }
+  font-family: "Montserrat", sans-serif; }
   .price-item:after {
     content: "";
     display: block;
@@ -216,7 +215,7 @@ li a:hover {
   height: 100px; }
 
 .money {
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 100px; }
@@ -231,7 +230,7 @@ li a:hover {
     margin-right: 10px; }
 
 .prise-text {
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Noto Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 50px;
@@ -321,7 +320,7 @@ li a:hover {
   margin: 0;
   line-height: 48px;
   font-size: 14px;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500; }
   .filter:after {
     content: "";
@@ -372,7 +371,7 @@ li a:hover {
   transition: all 0.5s ease-in-out; }
   .hover-content p {
     color: white;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
     margin-left: 20px; }
@@ -424,7 +423,7 @@ li a:hover {
 .contact-text {
   font-size: 14px;
   font-weight: 400;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   line-height: 24px; }
   .contact-text i {
     color: #f27768;
@@ -434,7 +433,7 @@ li a:hover {
     line-height: 24px;
     margin-right: 10px; }
   .contact-text span {
-    font-family: "JetBrains Mono",monospace;
+    font-family: "Noto Sans", sans-serif;
     line-height: 24px;
     display: block;
     margin-bottom: 25px;
@@ -454,7 +453,7 @@ li a:hover {
 
 .input-text,
 .input-textarea {
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Noto Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 50px;
@@ -627,7 +626,7 @@ form {
   display: block;
   padding: 0 40px;
   color: white;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 60px;
@@ -650,7 +649,7 @@ form {
   top: 100px;
   opacity: 0.1;
   color: #010000;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 172px;
   font-weight: 700;
   line-height: 170px;
@@ -658,7 +657,7 @@ form {
 
 .copyright {
   color: #c7c7c7;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   line-height: 24px;
   position: absolute;
@@ -1009,7 +1008,7 @@ form {
   .image-form select::-ms-expand {
     display: none; }
   .image-form .select {
-    font-family: "JetBrains Mono",monospace;
+    font-family: "Noto Sans", sans-serif;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
@@ -1098,7 +1097,7 @@ form {
 
 .file_upload > div {
   padding-left: 1em;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Noto Sans", sans-serif;
   line-height: 49px;
   color: #313131;
   font-size: 14px; }
@@ -1117,7 +1116,7 @@ form {
 
 .fill {
   font-weight: 400;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "Noto Sans", sans-serif;
   line-height: 49px;
   color: #313131;
   font-size: 14px;
