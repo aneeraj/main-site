@@ -7,7 +7,7 @@ theme = "cactus"
   colortheme = "dark" # dark, light, white, or classic
 [[menu.main]]
 name = "Home"
-url = "https://neerajajithkumar.com/blog"
+url = "https://neerajajithkumar.com/"
 weight = 1
 
 [[menu.main]]
