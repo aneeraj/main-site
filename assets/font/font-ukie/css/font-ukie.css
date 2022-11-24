@@ -41,16 +41,7 @@
     line-height: 1;
 }
 
-.social-icons {
-    padding-top: 5px;
-}
-.social-icons li a {
-    font-size: 15px;
-    color: #ffffff;
-}
-.social-icons li a:hover {
-    color: #ce0a0a;
-}
+
 .uf-behance:before {
     content: "\e959";
 }
