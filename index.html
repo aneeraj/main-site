@@ -39,7 +39,8 @@
     <!-- include the site stylesheet -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <!-- include include default theme -->
-    <link rel="stylesheet" href="assets/css/red-color.css" />
+    <link rel="stylesheet" href="assets/css/red-color-light.css" />
+    <link disabled rel="preload" id="dark-theme" onload="this.onload=null;this.rel='stylesheet'" href="assets/css/red-color.css" type="text/css" as="style">
     <link href="#" rel="stylesheet" type="text/css" data-color="green-scheme" media="all" id="stylesheet-new" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
@@ -63,6 +64,9 @@
     <img src="assets/img/loader.gif" alt="">
 </div>
 <!-- End Preloader -->
+<a id="dark-toggle" href="#" class="dark-modes" aria-label="dark-mode-toggle">
+    <i class="fas fa-moon"></i>
+</a>
 <!-- Start Fullpage -->
 <div class="remove" id="fullpage">
     <!-- Start section about -->
@@ -105,7 +109,7 @@
                         Bengaluru, India
                     </p>
                     <ul class="social-icons  list-inline mb-0 text-center">
-                        <li class="list-inline-item"> <a href="https://www.linkedin.com/in/aneeraj/" target="_blank"> <i class="fab fa-linkedin" aria-hidden="true"></i> </a></li> <li class="list-inline-item"> <a href="https://github.com/aneeraj" target="_blank"> <i class="fab fa-github" aria-hidden="true"></i> </a></li><li class="list-inline-item"> <a href="https://twitter.com/a__neeraj" target="_blank"> <i class="fab fa-twitter" aria-hidden="true"></i> </a></li></ul>
+                        <li class="list-inline-item"> <a href="https://www.linkedin.com/in/aneeraj/" target="_blank"> <i class="soclr fab fa-linkedin" aria-hidden="true"></i> </a></li> <li class="list-inline-item"> <a href="https://github.com/aneeraj" target="_blank"> <i class="soclr fab fa-github" aria-hidden="true"></i> </a></li><li class="list-inline-item"> <a href="https://twitter.com/a__neeraj" target="_blank"> <i class="soclr fab fa-twitter" aria-hidden="true"></i> </a></li></ul>
                 </div>
                 <!-- End Text-center -->
                 <div class=" col-md-offset-1 col-md-5 center">
@@ -153,5 +157,34 @@
 <script src="assets/js/jquery.mixitup.js" type="text/javascript"></script>
 <script src="assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
 <script src="assets/js/scripts.js" type="text/javascript"></script>
+<script>
+    const darkIconClass = 'fas fa-moon'
+const lightIconClass = 'fas fa-sun'
+var darkCSS = $("#dark-theme");
+var darkToggleIcon = $("#dark-toggle i");
+
+// Set theme with the given mode and toggle the theme icon button
+function setThemeMode(mode) {
+if (mode === "dark") {
+darkCSS.prop('disabled', false)
+$("#dark-toggle i").attr('class', lightIconClass)
+} else if (mode === "light") {
+darkCSS.prop('disabled', true)
+darkToggleIcon.attr('class', darkIconClass)
+}
+}
+
+// Toggle dark mode when user click on the icon button
+$("#dark-toggle").click(function () {
+if (darkToggleIcon.attr("class") == darkIconClass) {
+setThemeMode("dark")
+localStorage.setItem("dark-mode", "dark");
+} else if (darkToggleIcon.attr("class") == lightIconClass) {
+setThemeMode("light")
+localStorage.setItem("dark-mode", "light");
+}
+});
+setThemeMode(localStorage.getItem("dark-mode") || "light");
+</script>
 </body>
 </html>
