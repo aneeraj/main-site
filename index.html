@@ -178,11 +178,12 @@ darkToggleIcon.attr('class', darkIconClass)
 $("#dark-toggle").click(function () {
 if (darkToggleIcon.attr("class") == darkIconClass) {
 setThemeMode("dark")
+localStorage.setItem("dark-mode", "dark");
 } else if (darkToggleIcon.attr("class") == lightIconClass) {
 setThemeMode("light")
 }
 });
-setThemeMode(localStorage.getItem("dark-mode-theme") || "light");
+setThemeMode(localStorage.getItem("dark-mode") || "light");
 </script>
 </body>
 </html>
