@@ -642,6 +642,10 @@ form {
   margin: 0;
   text-align: left; }
 
+.soclr {
+  color: #fff;
+}
+
 .main-menu a {
   display: block;
   padding: 0 40px;

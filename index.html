@@ -109,7 +109,7 @@
                         Bengaluru, India
                     </p>
                     <ul class="social-icons  list-inline mb-0 text-center">
-                        <li class="list-inline-item"> <a href="https://www.linkedin.com/in/aneeraj/" target="_blank"> <i class="fab fa-linkedin" aria-hidden="true"></i> </a></li> <li class="list-inline-item"> <a href="https://github.com/aneeraj" target="_blank"> <i class="fab fa-github" aria-hidden="true"></i> </a></li><li class="list-inline-item"> <a href="https://twitter.com/a__neeraj" target="_blank"> <i class="fab fa-twitter" aria-hidden="true"></i> </a></li></ul>
+                        <li class="list-inline-item"> <a href="https://www.linkedin.com/in/aneeraj/" target="_blank"> <i class="soclr fab fa-linkedin" aria-hidden="true"></i> </a></li> <li class="list-inline-item"> <a href="https://github.com/aneeraj" target="_blank"> <i class="soclr fab fa-github" aria-hidden="true"></i> </a></li><li class="list-inline-item"> <a href="https://twitter.com/a__neeraj" target="_blank"> <i class="soclr fab fa-twitter" aria-hidden="true"></i> </a></li></ul>
                 </div>
                 <!-- End Text-center -->
                 <div class=" col-md-offset-1 col-md-5 center">
@@ -181,6 +181,7 @@ setThemeMode("dark")
 localStorage.setItem("dark-mode", "dark");
 } else if (darkToggleIcon.attr("class") == lightIconClass) {
 setThemeMode("light")
+localStorage.setItem("dark-mode", "light");
 }
 });
 setThemeMode(localStorage.getItem("dark-mode") || "light");
