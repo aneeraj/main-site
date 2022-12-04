@@ -970,6 +970,12 @@ form {
 .order-btn-wrap {
   display: inline-block;
   width: 92px; }
+
+.gh-chart {
+  width: 100%;
+  margin-top: 30px;
+}
+
   .order-btn-wrap p {
     position: relative;
     top: 16px; }
