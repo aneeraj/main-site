@@ -137,7 +137,7 @@ $(document).ready(function () {
     var arr = new Array();
     $(".filter").each(function () {
         arr = $(this).attr("data-filter").slice();
-        $(this).children(".cat-count").text($(arr).length);
+        $(this).children(".cat-count").text($.find(arr).length);
     });
 
     $(".all").children(".cat-count").text($('.mix').length);
