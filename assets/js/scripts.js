@@ -38,17 +38,19 @@ $(document).ready(function () {
      Full-page scroll
      ----------------------------------------------------------------------
      */
-    $('#fullpage').fullpage({
-            menu: '#menu',
-            anchors: ['about-data', 'prising-data', 'portfolio-data', 'contact-data'],
-            navigation: true,
-            navigationPosition: 'right',
-            showActiveTooltip: true,
-            slidesNavigation: true,
-            slidesNavPosition: 'bottom',
-            responsiveWidth: (992)
-        }
-    );
+    if ($('#fullpage .section').length > 1) {
+        $('#fullpage').fullpage({
+                menu: '#menu',
+                anchors: ['about-data', 'prising-data', 'portfolio-data', 'contact-data'],
+                navigation: true,
+                navigationPosition: 'right',
+                showActiveTooltip: true,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                responsiveWidth: (992)
+            }
+        );
+    }
 
     /*
      ----------------------------------------------------------------------

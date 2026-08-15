@@ -1,201 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168757615-1"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neeraj Ajithkumar — Cloud Architect</title>
+    <meta name="description" content="Cloud Architect in Aarhus, Denmark. Designing platforms by day, building useful things by night.">
+    <meta name="theme-color" content="#eef2f0" id="theme-color-meta">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Neeraj Ajithkumar — Cloud Architect">
+    <meta property="og:description" content="Cloud Architect in Aarhus, Denmark. Designing platforms by day, building useful things by night.">
+    <meta property="og:url" content="https://neerajajithkumar.com/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Neeraj Ajithkumar — Cloud Architect">
+    <meta name="twitter:description" content="Cloud Architect in Aarhus, Denmark.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="shortcut icon" href="assets/img/favicons/apple-touch-icon.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4LJQD0N1G"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-168757615-1');
+        gtag('config', 'G-G4LJQD0N1G');
     </script>
-
-    <!-- Encoding -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Viewport width and initial-scale on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Home | Neeraj Ajithkumar</title>
-    <!-- mobile tab color -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#313131">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#313131">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#313131">
-    <!-- end mobile tab color -->
-    <!--  Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-    <!-- Font Ukie -->
-    <link type="text/css" media="all" href="assets/font/font-ukie/css/font-ukie.css" rel="stylesheet">
-    <!-- include the bootstrap stylesheet -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- include the fullpage stylesheet -->
-    <link rel="stylesheet" href="assets/css/jquery.fullpage.css">
-    <!-- include the magnific-popup stylesheet -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!-- include the site stylesheet -->
-    <script src="https://kit.fontawesome.com/b7c90bf627.js" crossorigin="anonymous"></script>
-    <!-- include include default theme -->
-    <link rel="stylesheet" href="assets/css/red-color-light.css" />
-    <link disabled rel="preload" id="dark-theme" onload="this.onload=null;this.rel='stylesheet'" href="assets/css/red-color.css" type="text/css" as="style">
-    <link href="#" rel="stylesheet" type="text/css" data-color="green-scheme" media="all" id="stylesheet-new" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="shortcut icon" href="assets/img/favicons/apple-touch-icon.png">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4LJQD0N1G"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-G4LJQD0N1G');
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
     </script>
 </head>
 <body>
-<!-- Start Preloader -->
-<div id="page-preloader">
-    <img src="assets/img/loader.gif" alt="">
-</div>
-<!-- End Preloader -->
-<a id="dark-toggle" href="#" class="dark-modes" aria-label="dark-mode-toggle">
-    <i class="fas fa-moon"></i>
-</a>
-<!-- Start Fullpage -->
-<div class="remove" id="fullpage">
-    <!-- Start section about -->
-    <div id="navabout" data-anchor="about-data" class="section about">
-        <!-- Start Bg-title -->
-        <div class="bg-title">
-            About
-        </div>
-        <!-- End Bg-title -->
-        <!-- Start container  -->
-        <div class="container">
-            <!-- Start row  -->
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <!-- Start Text-center -->
-                <div class="col-md-3 text-center">
-                    <!-- Start Photo -->
-                    <div class="photo">
+    <div class="page">
+        <header class="top">
+            <a class="mark" href="/">Neeraj Ajithkumar</a>
+            <nav class="top-nav" aria-label="Primary">
+                <a href="#now">now</a>
+                <a href="#experience-label">work</a>
+                <a href="#writing-label">writing</a>
+                <span class="mcp-url">https://mcpp.my/neeraj</span>
+                <a href="#social-label">elsewhere</a>
+                <button class="theme-btn" id="theme-toggle" type="button">light</button>
+            </nav>
+        </header>
 
-                        <div class="photo-wrapper">
-                            <img id="img-set" src="assets/img/designer.svg" alt="">
+        <section class="hero">
+            <div>
+                <p class="kicker">Cloud Architect</p>
+                <h1 class="display">Hello, I’m<br><em>Neeraj</em></h1>
+                <p class="lede">
+                    Cloud architect by day, maker of useful things by night —
+                    based in Aarhus, Denmark.
+                </p>
+                <div class="actions">
+                    <div class="mcp-cta">
+                        <div class="mcp-cta-heading">
+                            <span class="mcp-dot"></span>
+                            <strong>Connect to my MCP</strong>
                         </div>
+                        <p>Give your AI a little context before we talk.</p>
+                        <code>https://mcpp.my/neeraj</code>
                     </div>
-                    <!-- End Photo -->
-                    <!-- Start Photo-bg -->
-                    <div class="photo-bg">
-                    </div>
-                    <!-- End Photo-bg -->
-                    <h2 class="name">
-                        Neeraj Ajithkumar
-
-                    </h2>
-                    <p class="desiner">Cloud Platform Engineer</p>
-                                      <!-- End Photo-bg
-                    <p class="date">
-                        November 14, 1994
-                    </p> -->
-                    <p class="adress">
-                        Aarhus, Denmark
-                    </p>
-                    <ul class="social-icons  list-inline mb-0 text-center">
-                        <li class="list-inline-item"> <a href="https://www.linkedin.com/in/aneeraj/" target="_blank"> <i class="soclr fab fa-linkedin" aria-hidden="true"></i> </a></li> <li class="list-inline-item"> <a href="https://github.com/aneeraj" target="_blank"> <i class="soclr fab fa-github" aria-hidden="true"></i> </a></li><li class="list-inline-item"> <a href="https://twitter.com/a__neeraj" target="_blank"> <i class="soclr fab fa-twitter" aria-hidden="true"></i> </a></li></ul>
-                        <div class="bb">
-                            <ul class="social-icons  list-inline mb-0">
-                                <li class="list-inline-tem"><a href="https://www.stibosystems.com/"><img src="assets/img/stibo.png" alt="Stibo Systems"></a>
-                                <span class="work-text"><br>2021 - Present</span></li>
-                                <li class="list-inline-tem"><a href="https://www.capgemini.com/"><img src="assets/img/capg.png" alt="Capgemini"></a><span class="work-text"><br>2017 - 2021</span></li>
-                                <li class="list-inline-tem"><a href="https://netbigs.com/"><img src="assets/img/netb.png" alt="Net Bigs"></a><span class="work-text"><br>2013 - 2017</span></li>
-                            </ul>
-                        </div>
                 </div>
-                <!-- End Text-center -->
-                <div class=" col-md-offset-1 col-md-5 center">
-                    <h1 class="section-title">Hello!</h1>
-                    <h2 class="text-title">
-                        This is all about me!
-                    </h2>
-                    <!-- Start about-text -->
-                    <p class="about-text">
-                        By profession I am a Platform Engineer, 
-                        working on exciting projects.
-                        That's only about 8 hours of my day though. I love 
-                        making simple and clean things that have complicated 
-                        stories behind them, with a dose of humor, if possible.
-                    </p>
-                    <!-- End about-text -->
-                    <!-- Start row  -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="https://blog.neerajajithkumar.com/posts/" class="btn download"><i class="uf uf-pencil-tilted"></i>Blog</a>
-                            <!-- <a href="https://neerajajithkumar.com/Neeraj%20A%20-%20Resume.pdf" target="_blank" class="btn download"><i class="uf uf-download"></i>Download CV</a> -->
-                            <a href="mailto:hello@neerajajithkumar.com" class="btn download"><i class="uf uf-mail"></i>Contact Me</a>
-                        </div>
-                        <!-- End row  -->
+                <div class="facts hero-facts">
+                    <div class="fact"><strong>9 years</strong> in tech</div>
+                    <div class="fact"><strong>Stibo Systems</strong> current role</div>
+                    <div class="fact"><strong>TIL notes</strong> on the side</div>
+                </div>
+            </div>
+
+            <div class="portrait">
+                <img src="assets/img/designer.svg" alt="Neeraj Ajithkumar">
+                <div class="portrait-meta">
+                    <span>Aarhus, DK · from Kerala</span>
+                    <span>2013 → now</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="band now-band" id="now" aria-labelledby="now-label">
+            <h2 id="now-label" class="band-label">Now</h2>
+            <div class="band-body">
+                <p class="now-intro">At night and on weekends, I’m building things that have my attention.</p>
+                <div class="now-grid">
+                    <div class="now-item">
+                        <span class="now-key">building</span>
+                        <strong>kutty.io</strong>
+                        <p>A local-first personal operating system for plans, money, notes, habits, and an assistant with context.</p>
+                    </div>
+                    <div class="now-item">
+                        <span class="now-key">building</span>
+                        <strong>mcpp.my</strong>
+                        <p>A personal MCP profile that lets people reach you through their AI, with context before conversation.</p>
+                    </div>
+                    <div class="now-item">
+                        <span class="now-key">writing</span>
+                        <strong>small technical notes</strong>
+                        <p>Putting useful things somewhere I can find them again.</p>
                     </div>
                 </div>
             </div>
-            <!-- End row  -->
-            <div class="row center">
-                <img class="gh-chart" src="https://ghchart.rshah.org/ce0a0a/aneeraj" alt="2016rshah's Blue Github Chart" />
+        </section>
+
+        <section class="band" aria-labelledby="experience-label">
+            <h2 id="experience-label" class="band-label">Experience</h2>
+            <div class="band-body">
+                <ul class="experience">
+                    <li>
+                        <a href="https://www.stibosystems.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/stibo.png" alt="Stibo Systems">
+                            <div>
+                                <p class="experience-role">Cloud Architect</p>
+                                <p class="experience-company">Stibo Systems</p>
+                            </div>
+                            <span class="experience-dates">2021 – Present</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.capgemini.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/capg.png" alt="Capgemini">
+                            <div>
+                                <p class="experience-role">Software Engineer</p>
+                                <p class="experience-company">Capgemini</p>
+                            </div>
+                            <span class="experience-dates">2017 – 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://netbigs.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/netb.png" alt="Net Bigs">
+                            <div>
+                                <p class="experience-role">Software Engineer</p>
+                                <p class="experience-company">Net Bigs</p>
+                            </div>
+                            <span class="experience-dates">2013 – 2017</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <!-- End container -->
+        </section>
+
+        <section class="band" aria-labelledby="github-label">
+            <h2 id="github-label" class="band-label">GitHub</h2>
+            <div class="band-body">
+                <div class="github-wrap">
+                    <img src="https://ghchart.rshah.org/0f6e56/aneeraj" alt="GitHub contribution chart for aneeraj" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="band" aria-labelledby="writing-label">
+            <h2 id="writing-label" class="band-label">Writing</h2>
+            <div class="band-body">
+                <ul class="posts">
+                    <li>
+                        <a href="https://blog.neerajajithkumar.com/posts/content/posts/2024-02-24-vscode-shortcuts/" target="_blank" rel="noopener noreferrer">
+                            <span class="posts-title">Shortcuts in VSCode</span>
+                            <span class="posts-date">Feb 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://blog.neerajajithkumar.com/posts/content/posts/2024-02-24-ssh/" target="_blank" rel="noopener noreferrer">
+                            <span class="posts-title">SSH</span>
+                            <span class="posts-date">Feb 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://blog.neerajajithkumar.com/posts/content/posts/2023-08-16-kubernetes-debugging/" target="_blank" rel="noopener noreferrer">
+                            <span class="posts-title">Kubernetes Debugging</span>
+                            <span class="posts-date">Aug 2023</span>
+                        </a>
+                    </li>
+                </ul>
+                <a class="more" href="https://blog.neerajajithkumar.com/posts/">All posts on the TIL blog →</a>
+            </div>
+        </section>
+
+        <section class="band" aria-labelledby="social-label">
+            <h2 id="social-label" class="band-label">Elsewhere</h2>
+            <div class="band-body">
+                <div class="socials">
+                    <a href="https://github.com/aneeraj" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/aneeraj/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.062 2.062 0 0 1 2.063-2.063 2.063 2.063 0 0 1 2.063 2.065 2.062 2.062 0 0 1-2.063 2.063zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://twitter.com/a__neeraj" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        X
+                    </a>
+                    <a href="mailto:hello@neerajajithkumar.com">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div>
+                <span>© 2026 Neeraj Ajithkumar</span>
+                <span class="footer-separator">·</span>
+                <span>Aarhus, Denmark</span>
+            </div>
+            <div>
+                <span class="footer-status"><i></i> available for a good conversation</span>
+                <a href="mailto:hello@neerajajithkumar.com">hello@neerajajithkumar.com</a>
+            </div>
+        </footer>
     </div>
-    <!-- End section about -->
-</div>
-<!-- End Fullpage -->
 
-<!-- Scroll To Top -->
-<a href="#" class="scroll-to-top" style="display: inline;">
-    <i class="uf uf-arrow-up"></i>
-</a>
-<!-- end Scroll To Top -->
+    <script>
+        (function () {
+            var toggle = document.getElementById('theme-toggle');
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery.fullPage.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery.mixitup.js" type="text/javascript"></script>
-<script src="assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
-<script src="assets/js/scripts.js" type="text/javascript"></script>
-<script>
-    const darkIconClass = 'fas fa-moon'
-const lightIconClass = 'fas fa-sun'
-var darkCSS = $("#dark-theme");
-var darkToggleIcon = $("#dark-toggle i");
+            toggle.addEventListener('click', function () {
+                var light = document.documentElement.getAttribute('data-theme') === 'light';
+                document.documentElement.setAttribute('data-theme', light ? 'dark' : 'light');
+                localStorage.setItem('theme', light ? 'dark' : 'light');
+                toggle.textContent = light ? 'light' : 'dark';
+            });
 
-// Set theme with the given mode and toggle the theme icon button
-function setThemeMode(mode) {
-if (mode === "dark") {
-darkCSS.prop('disabled', false)
-$("#dark-toggle i").attr('class', lightIconClass)
-} else if (mode === "light") {
-darkCSS.prop('disabled', true)
-darkToggleIcon.attr('class', darkIconClass)
-}
-}
+            toggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        })();
+    </script>
 
-// Toggle dark mode when user click on the icon button
-$("#dark-toggle").click(function () {
-if (darkToggleIcon.attr("class") == darkIconClass) {
-setThemeMode("dark")
-localStorage.setItem("dark-mode", "dark");
-} else if (darkToggleIcon.attr("class") == lightIconClass) {
-setThemeMode("light")
-localStorage.setItem("dark-mode", "light");
-}
-});
-setThemeMode(localStorage.getItem("dark-mode") || "light");
-</script>
 </body>
 </html>
