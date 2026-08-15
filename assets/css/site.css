@@ -163,6 +163,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .now-key { display: block; margin-bottom: 20px; color: var(--muted); font-size: 10px; text-transform: uppercase; }
 .now-key::before { margin-right: 7px; color: var(--accent-dim); content: "./"; }
 .now-item strong { display: block; color: var(--accent); font-size: 12px; font-weight: 400; }
+.now-link { text-decoration: none; }
+.now-link:hover strong { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .now-item p { margin: 10px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
 
 .experience, .posts { padding: 0; margin: 0; list-style: none; }
@@ -176,6 +178,22 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .experience-role { font-size: 11px; }
 .experience-company { color: var(--ink-soft); font-size: 12px; }
 .experience-dates, .posts-date { color: var(--muted); font-size: 10px; }
+
+.timeline-company { padding: 20px 0 6px; border-top: 1px solid var(--line); }
+.timeline-company:first-child { padding-top: 0; border-top: 0; }
+.timeline-company-name { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
+.timeline-company-name:hover strong { color: var(--accent); }
+.timeline-company-name img { width: 34px; height: 34px; padding: 6px; border: 1px solid var(--line); object-fit: contain; background: var(--panel); filter: grayscale(1) brightness(1.6); }
+.timeline-company-name strong, .timeline-company-name small { display: block; }
+.timeline-company-name strong { font-size: 13px; font-weight: 500; }
+.timeline-company-name small { color: var(--muted); font-size: 10px; }
+.timeline { position: relative; margin: 12px 0 0 16px; padding: 0 0 4px 24px; border-left: 1px solid var(--line); list-style: none; }
+.timeline li { position: relative; padding: 0 0 17px; color: var(--ink-soft); }
+.timeline li::before { position: absolute; top: 5px; left: -29px; width: 7px; height: 7px; border: 1px solid var(--accent); border-radius: 50%; background: var(--bg); content: ""; }
+.timeline li:last-child { padding-bottom: 4px; }
+.timeline li strong, .timeline li span { display: block; }
+.timeline li strong { color: var(--ink); font-size: 11px; font-weight: 500; }
+.timeline li span { color: var(--muted); font-size: 10px; line-height: 1.55; }
 
 .github-wrap { padding: 20px; overflow: hidden; border: 1px solid var(--line); background: var(--panel); }
 .github-wrap img { display: block; width: 100%; min-width: 0; mix-blend-mode: screen; opacity: 0.9; }
