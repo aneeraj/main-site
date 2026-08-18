@@ -7,6 +7,7 @@
   --line: #30302c;
   --accent: #d5f36c;
   --serif: "Newsreader", Georgia, serif;
+  --hand: "Caveat", cursive;
   --sans: "DM Sans", system-ui, sans-serif;
   --mono: "DM Mono", ui-monospace, monospace;
 }
@@ -82,6 +83,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .mcp-note { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-top: 26px; color: var(--muted); font-size: 12px; }
 .mcp-note-label { color: var(--ink-soft); }
 .mcp-note code { color: var(--accent); font: 12px var(--mono); user-select: text; }
+.mcp-note-top { align-items: center; gap: 18px; width: fit-content; margin-top: 36px; padding-bottom: 8px; border-bottom: 1px solid var(--accent); }
+.mcp-note-top .mcp-note-label { color: var(--ink); font: 500 1.75rem/1 var(--hand); }
+.mcp-note-top code { font-size: 13px; }
 
 .career-company { padding: 25px 0 32px; border-bottom: 1px solid var(--line); }
 .career-company:first-child { padding-top: 0; }
@@ -98,6 +102,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .career-list strong { font-size: 13px; font-weight: 500; }
 .career-list span { color: var(--muted); font: 11px/1.5 var(--mono); }
 
+.activity-chart { display: block; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.activity-chart img { display: block; width: 100%; opacity: 0.8; transition: opacity 0.2s; }
+.activity-chart:hover img { opacity: 1; }
+
 .writing-list { border-top: 1px solid var(--line); }
 .writing-list a { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 14px; text-decoration: none; }
 .writing-list a:hover span { color: var(--accent); }
@@ -109,6 +117,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .connect-links a { font-size: 13px; text-decoration: none; }
 .connect-links a:hover { color: var(--accent); }
 .connect-links span { margin-left: 5px; color: var(--muted); }
+
+.hand-note { margin: 8px 0 44px; color: var(--muted); font: 500 clamp(1.8rem, 4vw, 2.8rem)/1 var(--hand); letter-spacing: 0.01em; transform: rotate(-2deg); }
+.presence-note { max-width: 580px; margin: 0 0 36px; color: var(--muted); font: 12px/1.7 var(--mono); }
+.presence-note time { color: var(--ink-soft); }
 
 .site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 26px 0 42px; color: var(--muted); font: 10px var(--mono); }
 .site-footer a { color: var(--muted); text-decoration: none; }

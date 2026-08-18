@@ -17,7 +17,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/site.css">
     <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png">
@@ -60,6 +60,10 @@
                 <p>Cloud architect by day, maker of things by night and on weekends.</p>
                 <p>I design reliable platforms at <a href="https://www.stibosystems.com/" target="_blank" rel="noopener noreferrer">Stibo Systems</a>, and spend my own time building products, exploring ideas, and writing things down.</p>
             </div>
+            <div class="mcp-note mcp-note-top">
+                <span class="mcp-note-label">connect to my MCP</span>
+                <code>https://mcpp.my/neeraj</code>
+            </div>
             <div class="intro-meta">
                 <span>9 years in tech</span>
                 <span>currently at Stibo Systems</span>
@@ -69,7 +73,6 @@
 
         <section class="section now-section" id="now" aria-labelledby="now-title">
             <div class="section-heading">
-                <span class="section-number">01</span>
                 <h2 id="now-title">now</h2>
             </div>
             <div class="section-content">
@@ -92,16 +95,11 @@
                         <span class="project-arrow">↗</span>
                     </a>
                 </div>
-                <div class="mcp-note">
-                    <span class="mcp-note-label">connect to my MCP</span>
-                    <code>https://mcpp.my/neeraj</code>
-                </div>
             </div>
         </section>
 
         <section class="section" id="work" aria-labelledby="work-title">
             <div class="section-heading">
-                <span class="section-number">02</span>
                 <h2 id="work-title">work</h2>
             </div>
             <div class="section-content">
@@ -142,9 +140,20 @@
             </div>
         </section>
 
+        <section class="section activity-section" aria-labelledby="activity-title">
+            <div class="section-heading">
+                <h2 id="activity-title">activity</h2>
+            </div>
+            <div class="section-content">
+                <p class="section-lead">A small record of things I have been making in public.</p>
+                <a class="activity-chart" href="https://github.com/aneeraj" target="_blank" rel="noopener noreferrer">
+                    <img src="https://ghchart.rshah.org/0f6e56/aneeraj" alt="GitHub contribution activity for aneeraj" loading="lazy">
+                </a>
+            </div>
+        </section>
+
         <section class="section" aria-labelledby="writing-title">
             <div class="section-heading">
-                <span class="section-number">03</span>
                 <h2 id="writing-title">writing</h2>
             </div>
             <div class="section-content">
@@ -160,7 +169,6 @@
 
         <section class="section" id="connect" aria-labelledby="connect-title">
             <div class="section-heading">
-                <span class="section-number">04</span>
                 <h2 id="connect-title">connect</h2>
             </div>
             <div class="section-content connect-content">
@@ -174,9 +182,13 @@
             </div>
         </section>
 
+        <p class="hand-note">thanks for stopping by.</p>
+        <p class="presence-note">on my side of the screen, it is <time id="current-time">now</time>, and it is <span id="weather-status">checking the weather in Aarhus...</span></p>
+
         <footer class="site-footer">
             <span>© 2026 Neeraj Ajithkumar</span>
             <span>made in Aarhus · from Kerala</span>
+            <span>still making things</span>
             <a href="#top">back to top ↑</a>
         </footer>
     </main>
@@ -194,6 +206,55 @@
                 meta.setAttribute('content', light ? '#f7f6f2' : '#10100f');
             }
 
+            function updateTime() {
+                var time = document.getElementById('current-time');
+                time.textContent = new Intl.DateTimeFormat([], {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false
+                }).format(new Date());
+            }
+
+            function updateWeather() {
+                var weather = document.getElementById('weather-status');
+                var url = 'https://api.open-meteo.com/v1/forecast?latitude=56.1629&longitude=10.2039&current=temperature_2m,weather_code&timezone=Europe%2FCopenhagen';
+                var descriptions = {
+                    0: 'clear',
+                    1: 'mostly clear',
+                    2: 'a bit cloudy',
+                    3: 'pretty cloudy',
+                    45: 'foggy',
+                    48: 'foggy',
+                    51: 'drizzling',
+                    53: 'drizzling',
+                    55: 'drizzling quite a bit',
+                    61: 'raining a little',
+                    63: 'raining',
+                    65: 'raining quite a bit',
+                    71: 'snowing a little',
+                    73: 'snowing',
+                    75: 'snowing quite a bit',
+                    80: 'showery',
+                    81: 'showery',
+                    82: 'very showery',
+                    95: 'stormy',
+                    96: 'stormy',
+                    99: 'stormy'
+                };
+
+                fetch(url)
+                    .then(function (response) { return response.json(); })
+                    .then(function (data) {
+                        var current = data.current;
+                        var temperature = Math.round(current.temperature_2m);
+                        var description = descriptions[current.weather_code] || 'quiet skies';
+                        weather.textContent = temperature + '°C in Aarhus with ' + description + '.';
+                    })
+                    .catch(function () {
+                        weather.textContent = 'Aarhus is keeping the weather to itself.';
+                    });
+            }
+
             toggle.addEventListener('click', function () {
                 document.documentElement.setAttribute('data-theme', light ? 'dark' : 'light');
                 localStorage.setItem('theme', light ? 'dark' : 'light');
@@ -201,6 +262,10 @@
             });
 
             updateTheme();
+            updateTime();
+            window.setInterval(updateTime, 60000);
+            updateWeather();
+            window.setInterval(updateWeather, 900000);
         })();
     </script>
 </body>
