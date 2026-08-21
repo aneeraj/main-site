@@ -60,7 +60,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .site-header nav a:hover, .theme-toggle:hover { color: var(--ink); }
 .theme-toggle { padding: 0; border: 0; color: var(--muted); background: transparent; font: inherit; cursor: pointer; }
 
-.intro { padding: clamp(100px, 17vw, 180px) 0 clamp(100px, 16vw, 170px); }
+.intro { padding: clamp(72px, 8vw, 120px) 0 clamp(100px, 16vw, 170px); }
 .eyebrow, .section-number { color: var(--muted); font: 12px var(--mono); letter-spacing: 0.02em; }
 .eyebrow { margin: 0 0 24px; text-transform: lowercase; }
 .eyebrow { color: var(--accent-secondary); }
